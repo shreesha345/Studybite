@@ -1,66 +1,39 @@
-from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, NoTranscriptFound
-from deep_translator import GoogleTranslator
-import concurrent.futures
-import re
+import subprocess
+import os
+import glob
 
-# Hindi to english translator
-transEngine = GoogleTranslator(source="hi", target="en")
-
-def secondsToTimestamp(s: int) -> str:
-    '''
-    Convert seconds to timestamp with mm:ss format
-    '''
-    
-    minutes, remainingSeconds = divmod(round(s), 60)
-    return f"{minutes}:{remainingSeconds}"
-
-def translateTrans(d: dict) -> dict:
-    return {
-        "start":secondsToTimestamp(d["start"]),
-        "end":secondsToTimestamp(d["start"] + d["duration"]),
-        "text":transEngine.translate(d["text"])
-    }
-
-def extractVideoIdFromUrl(videoUrl: str) -> str:
-    # Matches the url of one of the type and return
-    r = re.search(r"youtu.be/([\w\d-]+)|v=([\w\d-]+)", videoUrl).groups()
-    return r[0] or r[1]
-    
-def getCaptions(youtubeVideoUrl: str) -> list[dict] | str:
-    '''
-    Returns dictionary of start, end and each caption of the video
-    '''
-    videoId = extractVideoIdFromUrl(youtubeVideoUrl)
+def fetch_and_save_transcript(video_url, output_file='transcript.srt'):
     try:
-        # Tries to find english transcription and collect it
-        trans = YouTubeTranscriptApi.list_transcripts(videoId).find_transcript(["en"])
-        
-        # Parse each dicts and return
-        return [
-                {
-            "start":secondsToTimestamp(d["start"]),
-            "end":secondsToTimestamp(d["start"] + d["duration"]),
-            "text":d["text"]
-            }
-            for d in trans.fetch()
-        ]
-    
-    except TranscriptsDisabled:
-        # If transcription is disabled for the video
-        return "Transcripts disabled for the video"
-    
-    except NoTranscriptFound:
-        # If english transcription is not found then it finds for the hindi transcription and collects it
-        trans = YouTubeTranscriptApi.list_transcripts(videoId).find_transcript(["hi"])
-        
-        # Translating each dicts of transcription with threading to speed up the process
-        with concurrent.futures.ThreadPoolExecutor() as exe:
-            parsedTrans = exe.map(translateTrans, trans.fetch())
-            return list(parsedTrans)
-    except:
-        # If an unknown error occurs
-        return "Cannot fetch transcription for this video"
+        # Run yt-dlp command with corrected ffmpeg location
+        subprocess.run([
+            'yt-dlp',
+            '--write-auto-sub',
+            '--convert-subs', 'srt',
+            '--skip-download',
+            '--ffmpeg-location', 'C:\\ffmpeg',
+            video_url
+        ], check=True)
 
-url = input("Enter a yt video link: ")
-print()
-print(getCaptions(url))
+        # Find the generated .srt file
+        srt_files = glob.glob('*.srt')
+        if not srt_files:
+            print("Error: No .srt file was generated.")
+            return
+
+        # Rename the first .srt file found to the specified output file
+        os.rename(srt_files[0], output_file)
+        print(f"Transcript saved as {output_file}")
+
+        # Clean up any other .srt files if multiple were generated
+        for file in srt_files[1:]:
+            os.remove(file)
+
+    except subprocess.CalledProcessError as e:
+        print(f"Error running yt-dlp: {e}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Example usage
+if __name__ == "__main__":
+    video_url = input("Enter the YouTube video URL: ")
+    fetch_and_save_transcript(video_url)
