@@ -26,7 +26,7 @@ def extractVideoIdFromUrl(videoUrl: str) -> str:
     r = re.search(r"youtu.be/([\w\d-]+)|v=([\w\d-]+)", videoUrl).groups()
     return r[0] or r[1]
     
-def getCaptions(youtubeVideoUrl: str) -> dict | str:
+def getCaptions(youtubeVideoUrl: str) -> list[dict] | str:
     '''
     Returns dictionary of start, end and each caption of the video
     '''
