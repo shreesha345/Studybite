@@ -8,10 +8,7 @@ transEngine = GoogleTranslator(source="hi", target="en")
 
 def secondsToTimestamp(s: int) -> str:
     '''
-    To convert milliseconds to timestamp
-    Example
-    Input: 159477
-    Output: 2:40
+    Convert seconds to timestamp with mm:ss format
     '''
     
     minutes, remainingSeconds = divmod(round(s), 60)
