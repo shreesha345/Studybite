@@ -1,32 +1,27 @@
-import re
-def timestampToSecond(ts: str):
-    '''
-    Converts a given timestamp of the format hh:mm:ss to total seconds
-    '''
-    hr, minn, sec = map(int, ts.split(":"))
-    return 3600*hr + 60*minn + sec
+import subprocess
+import os
 
-def extractVideoIdFromUrl(videoUrl: str) -> str:
-    # Matches the url of one of the type and return
-    r = re.search(r"youtu.be/([\w\d-]+)|v=([\w\d-]+)|live/([\w\d-]+)", videoUrl).groups()
-    return r[0] or r[1] or r[2]
-
-def embed(ytVideoUrl: str, ts1: str = "00:00:00", ts2: str = "00:01:00") -> str:
+def downloadSegment(ytVideoUrl: str, ts1: str = "00:00:00", ts2: str = "00:01:00"):
     '''
-    Returns an embeddable iframe html code of a yt video given ts1 and ts2 as start and end timestamps
+    downloads a segment of video and return the output file name
     '''
-    embeddingTemplate = '''
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/{}?start={}&end={}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    '''
-    videoId = extractVideoIdFromUrl(ytVideoUrl)
-    start = timestampToSecond(ts1)
-    end = timestampToSecond(ts2)
+    # Delete the file named output.mp4 so that it allows yt-dlp to write with the same name
+    if os.path.exists("output.mp4"):
+        os.remove("output.mp4")
     
-    return embeddingTemplate.format(videoId, start, end)
-
-def writeDemoHtml(iframe: str):
+    # Run the yt-dlp cli command
+    subprocess.run([
+        "yt-dlp",
+        "-f","mp4",
+        "-S", "res:720",
+        "--download-sections", f"*{ts1}-{ts2}",
+        "-o", "output.mp4",
+        ytVideoUrl
+    ],check=True)
+    
+def writeDemoHtml(videoFilename: str):
     '''
-    Writes a demo html code to test the iframe embedding
+    Writes a demo html code to test the video embedding
     '''
     demoTemplate='''<!DOCTYPE html>
 <html lang="en">
@@ -36,19 +31,20 @@ def writeDemoHtml(iframe: str):
     <title>Document</title>
 </head>
 <body>
-    Youtube video
-    {}
+    Youtube Video
+    <video width="560" height="315" controls>
+        <source src={}>
+    </video>
 </body>
 </html>'''
     outputFileName = "embedTest.html"
     with open(outputFileName,"w") as f:
-        f.write(demoTemplate.format(iframe))
+        f.write(demoTemplate.format(videoFilename))
     print(f"Demo code written in {outputFileName}")
     
 url = input("Enter a youtube video url: ")
-ts1 = input("Enter start timestamp in the format of hh:mm:ss ")
-ts2 = input("Enter end timestamp in the format of hh:mm:ss ")
-print("iframe embedding:\n")
-embeddedCode = embed(url, ts1, ts2)
-print(embeddedCode)
-writeDemoHtml(embeddedCode)
+ts1 = input("Enter start timestamp:  ")
+ts2 = input("Enter end timestamp: ")
+print("Segment of the video is downloading...:\n")
+downloadSegment(url, ts1, ts2)
+writeDemoHtml("output.mp4")
