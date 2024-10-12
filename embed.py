@@ -3,7 +3,7 @@ import os
 
 def downloadSegment(ytVideoUrl: str, ts1: str = "00:00:00", ts2: str = "00:01:00"):
     '''
-    downloads a segment of video and return the output file name
+    Downloads a segment of video
     '''
     # Delete the file named output.mp4 so that it allows yt-dlp to write with the same name
     if os.path.exists("output.mp4"):
