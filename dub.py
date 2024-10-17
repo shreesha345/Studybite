@@ -53,7 +53,6 @@ def dubVideo(videoFileName: str, elevenlabsApiKey: str, targetLanguageCode: str)
     print(dub)
     
     dubbingId = dub.dict()["dubbing_id"]
-    dubbingId = "myo07GjgNs8cDScMjV7u"
     
     if wait_for_dubbing_completion(dubbingId, client):
         print("Downloading the dubbed video...")
