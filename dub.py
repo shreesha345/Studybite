@@ -8,6 +8,7 @@ def wait_for_dubbing_completion(dubbing_id: str, client) -> bool:
 
     Args:
         dubbing_id (str): The dubbing project id.
+        client: Your client object
 
     Returns:
         bool: True if the dubbing is successful, False otherwise.
