@@ -1,5 +1,7 @@
 from elevenlabs import ElevenLabs
 import time
+import moviepy.editor as me
+import os
 
 # This function was copied from official elevenlabs github repo
 def wait_for_dubbing_completion(dubbing_id: str, client) -> bool:
@@ -31,6 +33,7 @@ def wait_for_dubbing_completion(dubbing_id: str, client) -> bool:
             print("Dubbing failed:", metadata.error_message)
             return False
 
+
     print("Dubbing timed out")
     return False
 
@@ -53,14 +56,24 @@ def dubVideo(videoFileName: str, elevenlabsApiKey: str, targetLanguageCode: str)
     print(dub)
     
     dubbingId = dub.dict()["dubbing_id"]
+    outputVideoName = f"output-{targetLanguageCode}.mp4"
     
     if wait_for_dubbing_completion(dubbingId, client):
         print("Downloading the dubbed video...")
-        outputPath = f"output-{targetLanguageCode}.mp4"
-        with open(outputPath, "wb") as f:
+        with open(outputVideoName, "wb") as f:
             for chunk in client.dubbing.get_dubbed_file(dubbingId, targetLanguageCode):
                 f.write(chunk)
-        print("Dubbed video written as", outputPath)
+    
+    originalVideoClip = me.VideoFileClip("input.mp4")
+    dubbedVideoClip = me.VideoFileClip(f"output-{targetLanguageCode}.mp4")
+    
+    dubbedAudioClip = dubbedVideoClip.audio
+    originalVideoClip.audio = dubbedAudioClip
+    
+    os.remove(outputVideoName)
+    originalVideoClip.write_videofile(outputVideoName)
+    
+    print("Dubbed video written as", outputVideoName)
     
 if __name__=="__main__":
     # Keep the input video name as input.mp4
