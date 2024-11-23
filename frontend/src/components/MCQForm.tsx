@@ -6,84 +6,108 @@ interface MCQFormProps {
 }
 
 const MCQForm: React.FC<MCQFormProps> = ({ formContent, answerContent }) => {
-  const [selectedAnswers, setSelectedAnswers] = useState<{ [key: string]: string }>({});
-  const [showAnswers, setShowAnswers] = useState(false);
-  
-  // Extract correct answers from the answer content
-  const getCorrectAnswer = (answerText: string) => {
-    const match = answerText.match(/Correct Answer: ([A-D])/);
-    return match ? match[1] : null;
+  const [selectedAnswer, setSelectedAnswer] = useState<string>('');
+  const [showAnswer, setShowAnswer] = useState(false);
+
+  // Extract correct answer value from answerContent
+  const getCorrectAnswer = () => {
+    const valueMatch = answerContent.match(/<value>(.*?)<\/value>/);
+    return valueMatch ? valueMatch[1] : '';
+  };
+
+  // Parse options from form content
+  const parseOptions = () => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(formContent, 'text/html');
+    const options: { value: string; label: string }[] = [];
+    
+    // Get all div elements inside the form
+    const divs = doc.querySelectorAll('form div');
+    divs.forEach(div => {
+      const input = div.querySelector('input');
+      if (input && input.hasAttribute('value')) {
+        options.push({
+          value: input.getAttribute('value') || '',
+          label: div.textContent?.trim() || ''
+        });
+      }
+    });
+
+    return options;
+  };
+
+  // Get question text
+  const getQuestion = () => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(formContent, 'text/html');
+    const form = doc.querySelector('form');
+    if (form && form.previousSibling) {
+      return form.previousSibling.textContent?.trim() || '';
+    }
+    return '';
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setShowAnswers(true);
+    setShowAnswer(true);
   };
 
-  // Create a temporary div to parse HTML content
-  const tempDiv = document.createElement('div');
-  tempDiv.innerHTML = formContent;
-  const forms = tempDiv.getElementsByTagName('form');
-  
+  const correctAnswer = getCorrectAnswer();
+  const options = parseOptions();
+  const question = getQuestion();
+
   return (
-    <div className="space-y-4">
-      {Array.from(forms).map((form, formIndex) => {
-        const name = `mcq-${formIndex}`;
-        const correctAnswer = getCorrectAnswer(answerContent);
-        
-        return (
-          <form key={formIndex} onSubmit={handleSubmit} className="space-y-2">
-            {Array.from(form.getElementsByTagName('div')).map((div, index) => {
-              const value = div.textContent?.trim().charAt(0) || '';
-              const text = div.textContent?.trim() || '';
-              
-              return (
-                <div key={index} className="flex items-center space-x-2">
-                  <input
-                    type="radio"
-                    id={`${name}-${index}`}
-                    name={name}
-                    value={value}
-                    onChange={(e) => setSelectedAnswers(prev => ({
-                      ...prev,
-                      [name]: e.target.value
-                    }))}
-                    disabled={showAnswers}
-                    className="form-radio h-4 w-4 text-indigo-600"
-                  />
-                  <label
-                    htmlFor={`${name}-${index}`}
-                    className={`${
-                      showAnswers
-                        ? value === correctAnswer
-                          ? 'text-green-500'
-                          : selectedAnswers[name] === value
-                          ? 'text-red-500'
-                          : 'text-gray-100'
-                        : 'text-gray-100'
-                    }`}
-                  >
-                    {text}
-                  </label>
-                </div>
-              );
-            })}
-            {!showAnswers && (
-              <button
-                type="submit"
-                className="mt-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
-              >
-                Submit
-              </button>
-            )}
-            {showAnswers && (
-              <div className="mt-2 text-green-500 font-medium">
-                Correct Answer: {correctAnswer}
-              </div>
-            )}
-          </form>
-        );
-      })}
+    <div className="bg-gray-800 rounded-lg p-4 space-y-4">
+      {/* Question */}
+      <div className="text-gray-100 font-medium">{question}</div>
+
+      {/* MCQ Options */}
+      <form onSubmit={handleSubmit} className="space-y-3">
+        {options.map((option, index) => (
+          <div key={index} className="flex items-center space-x-3">
+            <input
+              type="radio"
+              id={`option-${index}`}
+              name="mcq-option"
+              value={option.value}
+              onChange={(e) => setSelectedAnswer(e.target.value)}
+              disabled={showAnswer}
+              className="form-radio h-4 w-4 text-indigo-600 focus:ring-indigo-500"
+            />
+            <label
+              htmlFor={`option-${index}`}
+              className={`
+                ${showAnswer && option.value === correctAnswer ? 'text-green-500' : ''}
+                ${showAnswer && option.value === selectedAnswer && option.value !== correctAnswer ? 'text-red-500' : ''}
+                ${!showAnswer ? 'text-gray-100' : ''}
+                cursor-pointer
+              `}
+            >
+              {option.label}
+            </label>
+          </div>
+        ))}
+
+        {/* Submit Button */}
+        {!showAnswer && (
+          <button
+            type="submit"
+            disabled={!selectedAnswer}
+            className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            Submit Answer
+          </button>
+        )}
+
+        {/* Answer Display */}
+        {showAnswer && (
+          <div className="mt-4">
+            <div className="text-green-500">
+              Correct Answer: {options.find(opt => opt.value === correctAnswer)?.label}
+            </div>
+          </div>
+        )}
+      </form>
     </div>
   );
 };
