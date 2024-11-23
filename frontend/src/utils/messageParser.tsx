@@ -2,9 +2,22 @@ import React from 'react';
 import MCQForm from '../components/MCQForm';
 import CodeBlock from '../components/CodeBlock';
 
-const extractCodeBlocks = (content: string) => {
+interface CodePart {
+  type: 'code';
+  language: string;
+  content: string;
+}
+
+interface TextPart {
+  type: 'text';
+  content: string;
+}
+
+type MessagePart = CodePart | TextPart;
+
+const extractCodeBlocks = (content: string): MessagePart[] => {
   const regex = /```(\w+)?\n([\s\S]*?)```/g;
-  const parts = [];
+  const parts: MessagePart[] = [];
   let lastIndex = 0;
   let match;
 
@@ -17,10 +30,10 @@ const extractCodeBlocks = (content: string) => {
       });
     }
 
-    // Add code block
+    // Add code block with default language if undefined
     parts.push({
       type: 'code',
-      language: match[1] || 'plaintext',
+      language: match[1] || 'plaintext', // Ensure we always have a string
       content: match[2]
     });
 
@@ -64,7 +77,7 @@ export const parseMessage = (content: string): React.ReactNode => {
               <CodeBlock
                 key={index}
                 code={part.content}
-                language={part.language}
+                language={part.language} // Now guaranteed to be a string
               />
             );
           } else {
