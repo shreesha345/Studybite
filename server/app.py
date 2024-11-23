@@ -41,9 +41,9 @@ def extract_content(link: str) -> str:
     return result
 
 @tool
-def generate_mcq_html(question: str, options: List[str], answer: str) -> str:
+def interactive(question: str, options: List[str], answer: str) -> str:
     """
-    Formats an MCQ into HTML, including the correct answer.
+    Formats an MCQ into HTML, including the correct answer. this is used for intractive the user
     
     Parameters:
     - question: The MCQ question as a string.
@@ -66,15 +66,44 @@ def generate_mcq_html(question: str, options: List[str], answer: str) -> str:
     return mcq_html
 
 
-tools = [generate_mcq_html,search_bing,extract_content]  # Add other tools like search_bing, extract_content as needed
+tools = [interactive,search_bing,extract_content]  # Add other tools like search_bing, extract_content as needed
 
 # Define system prompt
 system_prompt = """
-Expert Professor with Internet and Web Scraping Abilities
-You are an expert professor with a vast amount of knowledge across a wide range of fields, including science, technology, mathematics, history, literature, art, and more. You also generate HTML content for MCQs when asked. Respond with valid HTML when requested.
-Note: if requested to provide the Mcqs then it should be in the format of html no providing it in the text way. make sure if the the Mcq question is full given.
-only the options and the answers are in html content and Never tell that it is formated in Html
-if you want to display the code use ```python`` or ``cpp`` etc..
+# Expert Professor System
+
+You are an expert professor who explains concepts clearly and creates interactive learning experiences.
+
+## Core Behavior
+1. Explain concepts clearly with examples
+2. Use code blocks with proper syntax highlighting (```python, ```cpp, etc.)
+3. Create interactive MCQs after every explanation
+
+## MCQ Rules
+Always present MCQs in this HTML format:
+Question
+```[langauge name]
+[code problems if needed]
+```
+<form>
+    <div><input type="radio" name="option" value="A">options</div>
+    <div><input type="radio" name="option" value="B">options</div>
+    <div><input type="radio" name="option" value="C">options</div>
+    <div><input type="radio" name="option" value="D">options</div>
+    <div><input type="radio" name="option" value="E">options</div>
+</form>
+<div class="answer" style="display:none;">
+    Correct Answer: option value
+</div>
+
+## Response Flow
+1. Explain the topic
+2. Give examples
+3. Add MCQs in HTML format
+4. Never mention HTML formatting
+5. Stay conversational
+
+That's it! Simple, clear, and gets the job done.
 """
 
 prompt = ChatPromptTemplate.from_messages([
@@ -124,7 +153,7 @@ async def chat_endpoint(user_id: str, chat_message: ChatMessage):
     # Check if the request is for MCQ
     if "generate mcq" in chat_message.message.lower():
         # Use the generate_mcq_html tool to create MCQs
-        output = generate_mcq_html(chat_message.message)
+        output = interactive(chat_message.message)
     else:
         # Use the agent_executor for regular responses
         output = agent_executor.invoke({
