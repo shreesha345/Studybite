@@ -1,7 +1,7 @@
 from elevenlabs import ElevenLabs
 import time
 import moviepy.editor as me
-import os
+import os, shutil
 
 # This function was copied from official elevenlabs github repo
 def wait_for_dubbing_completion(dubbing_id: str, client) -> bool:
@@ -64,7 +64,7 @@ def dubVideo(videoFileName: str, elevenlabsApiKey: str, targetLanguageCode: str)
             for chunk in client.dubbing.get_dubbed_file(dubbingId, targetLanguageCode):
                 f.write(chunk)
     
-    originalVideoClip = me.VideoFileClip("input.mp4")
+    originalVideoClip = me.VideoFileClip(videoFileName)
     dubbedVideoClip = me.VideoFileClip(f"output-{targetLanguageCode}.mp4")
     
     dubbedAudioClip = dubbedVideoClip.audio
