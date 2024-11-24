@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import AuthPage from './components/AuthPage';
 import ChatPage from './pages/ChatPage';
 import NotesPage from './pages/NotesPage';
+import VideoTrnas from './pages/VideoTrans';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/chat" element={<ChatPage />} />
         <Route path="/notes" element={<NotesPage />} />
+        <Route path="/video" element={<VideoTrnas />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
