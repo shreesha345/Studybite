@@ -1,0 +1,30 @@
+# FastAPI and dependencies
+fastapi
+uvicorn
+python-dotenv
+pydantic
+starlette
+
+# AI/ML packages
+langchain
+langchain-core
+langchain-groq
+langchain-google-genai
+google-generativeai
+crewai
+langchain-community
+
+# Video and Audio Processing
+moviepy
+yt-dlp
+elevenlabs
+srt
+
+# Web scraping and content extraction
+trafilatura
+
+# Utilities
+colorama
+httpx
+typing-extensions
+uuid
