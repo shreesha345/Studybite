@@ -1,7 +1,7 @@
 
 ![Study Bite Logo](./frontend/icon.svg)
 
-# **Study Bite: Visual Learning Companion**  
+# **StudyBite: Visual Learning Companion**  
 
 
 
