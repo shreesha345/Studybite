@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  apis:
+    build: .
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "8002:8002"
+    volumes:
+      - ./logs:/var/log
+      - .:/app  # For development hot-reload
+    environment:
+      - PYTHONPATH=/app
+    env_file:
+      - ./env.list

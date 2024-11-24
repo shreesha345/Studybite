@@ -1,0 +1,991 @@
+2024-11-24 12:35:35,376 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-24 12:35:35,381 INFO supervisord started with pid 1
+2024-11-24 12:35:36,388 INFO spawned: 'api1' with pid 7
+2024-11-24 12:35:36,405 INFO spawned: 'api2' with pid 8
+2024-11-24 12:35:36,410 INFO spawned: 'api3' with pid 9
+2024-11-24 12:35:37,218 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:35:38,237 INFO spawned: 'api1' with pid 30
+2024-11-24 12:35:38,238 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:35:38,238 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:35:38,942 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:35:39,556 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:35:40,562 INFO spawned: 'api2' with pid 47
+2024-11-24 12:35:41,116 INFO spawned: 'api1' with pid 50
+2024-11-24 12:35:41,770 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:35:41,849 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:35:41,865 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:35:42,873 INFO spawned: 'api3' with pid 68
+2024-11-24 12:35:43,471 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:35:44,478 INFO spawned: 'api2' with pid 86
+2024-11-24 12:35:44,478 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:35:45,484 INFO spawned: 'api1' with pid 89
+2024-11-24 12:35:45,484 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:35:46,196 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:35:47,172 INFO gave up: api1 entered FATAL state, too many start retries too quickly
+2024-11-24 12:35:47,520 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:35:47,928 INFO spawned: 'api2' with pid 107
+2024-11-24 12:35:47,929 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:35:48,931 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:35:48,936 INFO spawned: 'api3' with pid 110
+2024-11-24 12:35:49,938 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:35:50,935 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:35:51,941 INFO spawned: 'api2' with pid 143
+2024-11-24 12:35:52,943 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:35:53,978 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:35:54,568 INFO spawned: 'api3' with pid 162
+2024-11-24 12:35:54,860 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:35:55,866 INFO spawned: 'api2' with pid 165
+2024-11-24 12:35:55,867 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:35:56,868 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:35:58,744 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:35:58,887 INFO spawned: 'api2' with pid 199
+2024-11-24 12:35:59,569 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:36:00,571 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:00,575 INFO spawned: 'api3' with pid 202
+2024-11-24 12:36:01,827 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:01,828 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:02,834 INFO spawned: 'api2' with pid 235
+2024-11-24 12:36:03,836 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:05,737 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:36:05,976 INFO spawned: 'api3' with pid 254
+2024-11-24 12:36:05,977 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:06,984 INFO spawned: 'api2' with pid 257
+2024-11-24 12:36:06,985 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:07,986 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:10,062 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:10,317 INFO spawned: 'api2' with pid 291
+2024-11-24 12:36:10,999 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:36:12,001 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:12,006 INFO spawned: 'api3' with pid 294
+2024-11-24 12:36:13,161 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:13,161 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:14,168 INFO spawned: 'api2' with pid 327
+2024-11-24 12:36:15,170 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:16,819 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:36:17,028 INFO spawned: 'api3' with pid 346
+2024-11-24 12:36:17,029 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:18,035 INFO spawned: 'api2' with pid 349
+2024-11-24 12:36:18,036 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:19,037 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:20,929 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:21,123 INFO spawned: 'api2' with pid 383
+2024-11-24 12:36:21,811 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:36:22,814 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:22,818 INFO spawned: 'api3' with pid 386
+2024-11-24 12:36:24,039 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:24,039 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:25,045 INFO spawned: 'api2' with pid 419
+2024-11-24 12:36:26,047 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:27,702 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:36:27,910 INFO spawned: 'api3' with pid 438
+2024-11-24 12:36:27,911 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:28,917 INFO spawned: 'api2' with pid 441
+2024-11-24 12:36:28,918 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:29,920 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:31,786 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:32,083 INFO spawned: 'api2' with pid 475
+2024-11-24 12:36:32,748 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:36:33,751 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:33,755 INFO spawned: 'api3' with pid 478
+2024-11-24 12:36:34,952 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:34,952 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:35,957 INFO spawned: 'api2' with pid 511
+2024-11-24 12:36:36,959 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:38,567 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:36:38,807 INFO spawned: 'api3' with pid 530
+2024-11-24 12:36:38,807 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:39,813 INFO spawned: 'api2' with pid 533
+2024-11-24 12:36:39,813 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:40,815 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:42,689 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:42,968 INFO spawned: 'api2' with pid 567
+2024-11-24 12:36:43,622 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:36:44,624 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:44,628 INFO spawned: 'api3' with pid 570
+2024-11-24 12:36:45,817 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:45,818 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:36:46,823 INFO spawned: 'api2' with pid 603
+2024-11-24 12:36:47,825 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:36:48,827 WARN received SIGTERM indicating exit request
+2024-11-24 12:36:48,828 INFO waiting for api2, api3 to die
+2024-11-24 12:36:49,586 WARN stopped: api3 (exit status 1)
+2024-11-24 12:36:49,597 WARN stopped: api2 (terminated by SIGTERM)
+2024-11-24 12:41:26,095 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-24 12:41:26,098 INFO supervisord started with pid 1
+2024-11-24 12:41:27,105 INFO spawned: 'api1' with pid 7
+2024-11-24 12:41:27,109 INFO spawned: 'api2' with pid 8
+2024-11-24 12:41:27,114 INFO spawned: 'api3' with pid 9
+2024-11-24 12:41:27,882 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:41:28,888 INFO spawned: 'api1' with pid 30
+2024-11-24 12:41:28,889 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:28,889 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:29,603 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:41:30,145 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:41:31,150 INFO spawned: 'api2' with pid 47
+2024-11-24 12:41:32,176 INFO spawned: 'api1' with pid 57
+2024-11-24 12:41:32,177 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:32,178 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:41:32,811 INFO spawned: 'api3' with pid 59
+2024-11-24 12:41:32,876 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:41:34,054 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:34,054 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:41:35,061 INFO spawned: 'api2' with pid 94
+2024-11-24 12:41:36,067 INFO spawned: 'api1' with pid 97
+2024-11-24 12:41:36,068 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:36,793 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:41:37,047 INFO gave up: api1 entered FATAL state, too many start retries too quickly
+2024-11-24 12:41:37,724 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:41:37,957 INFO spawned: 'api3' with pid 115
+2024-11-24 12:41:37,957 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:41:38,964 INFO spawned: 'api2' with pid 118
+2024-11-24 12:41:38,965 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:39,967 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:41,794 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:41:42,060 INFO spawned: 'api2' with pid 152
+2024-11-24 12:41:42,727 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:41:43,730 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:43,735 INFO spawned: 'api3' with pid 155
+2024-11-24 12:41:44,893 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:44,894 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:41:45,900 INFO spawned: 'api2' with pid 188
+2024-11-24 12:41:46,902 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:48,477 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:41:48,483 INFO spawned: 'api3' with pid 208
+2024-11-24 12:41:48,762 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:41:49,769 INFO spawned: 'api2' with pid 211
+2024-11-24 12:41:49,770 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:50,772 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:52,618 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:41:53,228 INFO spawned: 'api2' with pid 245
+2024-11-24 12:41:53,229 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:41:54,232 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:54,236 INFO spawned: 'api3' with pid 248
+2024-11-24 12:41:55,238 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:56,042 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:41:57,048 INFO spawned: 'api2' with pid 282
+2024-11-24 12:41:58,050 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:41:59,256 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:41:59,647 INFO spawned: 'api3' with pid 302
+2024-11-24 12:41:59,926 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:00,933 INFO spawned: 'api2' with pid 305
+2024-11-24 12:42:00,933 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:01,935 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:03,794 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:03,805 INFO spawned: 'api2' with pid 339
+2024-11-24 12:42:04,472 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:42:05,475 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:05,480 INFO spawned: 'api3' with pid 342
+2024-11-24 12:42:06,607 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:06,608 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:07,614 INFO spawned: 'api2' with pid 376
+2024-11-24 12:42:08,616 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:10,284 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:42:10,404 INFO spawned: 'api3' with pid 396
+2024-11-24 12:42:10,405 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:11,411 INFO spawned: 'api2' with pid 400
+2024-11-24 12:42:11,412 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:12,414 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:14,295 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:14,520 INFO spawned: 'api2' with pid 451
+2024-11-24 12:42:15,183 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:42:16,186 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:16,190 INFO spawned: 'api3' with pid 454
+2024-11-24 12:42:17,335 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:17,336 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:18,342 INFO spawned: 'api2' with pid 487
+2024-11-24 12:42:19,344 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:20,974 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:42:21,168 INFO spawned: 'api3' with pid 506
+2024-11-24 12:42:21,169 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:22,176 INFO spawned: 'api2' with pid 509
+2024-11-24 12:42:22,177 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:23,179 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:25,098 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:25,346 INFO spawned: 'api2' with pid 544
+2024-11-24 12:42:26,021 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:42:27,024 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:27,028 INFO spawned: 'api3' with pid 547
+2024-11-24 12:42:28,182 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:28,183 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:29,189 INFO spawned: 'api2' with pid 580
+2024-11-24 12:42:30,191 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:31,872 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:42:32,057 INFO spawned: 'api3' with pid 599
+2024-11-24 12:42:32,058 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:33,063 INFO spawned: 'api2' with pid 602
+2024-11-24 12:42:33,064 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:34,066 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:36,120 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:36,415 INFO spawned: 'api2' with pid 636
+2024-11-24 12:42:37,099 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:42:38,102 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:38,107 INFO spawned: 'api3' with pid 639
+2024-11-24 12:42:39,206 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:39,207 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:40,213 INFO spawned: 'api2' with pid 672
+2024-11-24 12:42:41,215 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:42,965 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:42:43,097 INFO spawned: 'api3' with pid 691
+2024-11-24 12:42:43,097 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:44,105 INFO spawned: 'api2' with pid 694
+2024-11-24 12:42:44,105 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:45,107 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:47,036 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:47,497 INFO spawned: 'api2' with pid 728
+2024-11-24 12:42:48,198 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:42:49,201 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:49,205 INFO spawned: 'api3' with pid 731
+2024-11-24 12:42:50,410 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:50,410 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:51,418 INFO spawned: 'api2' with pid 764
+2024-11-24 12:42:52,420 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:54,372 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:42:54,470 INFO spawned: 'api3' with pid 783
+2024-11-24 12:42:54,471 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:55,478 INFO spawned: 'api2' with pid 786
+2024-11-24 12:42:55,479 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:56,480 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:42:58,408 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:42:58,671 INFO spawned: 'api2' with pid 820
+2024-11-24 12:42:59,343 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:43:00,346 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:00,350 INFO spawned: 'api3' with pid 823
+2024-11-24 12:43:01,583 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:01,584 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:02,591 INFO spawned: 'api2' with pid 856
+2024-11-24 12:43:03,593 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:05,517 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:43:05,586 INFO spawned: 'api3' with pid 875
+2024-11-24 12:43:05,586 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:06,593 INFO spawned: 'api2' with pid 878
+2024-11-24 12:43:06,594 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:07,596 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:09,552 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:09,803 INFO spawned: 'api2' with pid 912
+2024-11-24 12:43:10,471 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:43:11,474 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:11,478 INFO spawned: 'api3' with pid 915
+2024-11-24 12:43:12,671 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:12,672 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:13,678 INFO spawned: 'api2' with pid 948
+2024-11-24 12:43:14,680 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:16,302 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:43:16,308 INFO spawned: 'api3' with pid 967
+2024-11-24 12:43:16,585 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:17,592 INFO spawned: 'api2' with pid 970
+2024-11-24 12:43:17,593 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:18,595 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:20,485 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:21,155 INFO spawned: 'api2' with pid 1004
+2024-11-24 12:43:21,156 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:43:22,159 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:22,163 INFO spawned: 'api3' with pid 1007
+2024-11-24 12:43:23,165 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:24,024 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:25,030 INFO spawned: 'api2' with pid 1040
+2024-11-24 12:43:26,032 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:27,055 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:43:27,565 INFO spawned: 'api3' with pid 1059
+2024-11-24 12:43:27,856 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:28,864 INFO spawned: 'api2' with pid 1062
+2024-11-24 12:43:28,865 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:29,866 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:31,816 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:31,835 INFO spawned: 'api2' with pid 1097
+2024-11-24 12:43:32,548 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:43:33,552 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:33,555 INFO spawned: 'api3' with pid 1115
+2024-11-24 12:43:34,600 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:34,600 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:35,606 INFO spawned: 'api2' with pid 1134
+2024-11-24 12:43:36,608 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:38,513 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:38,523 INFO spawned: 'api2' with pid 1153
+2024-11-24 12:43:38,524 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:43:39,527 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:39,531 INFO spawned: 'api3' with pid 1156
+2024-11-24 12:43:40,532 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:41,348 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:42,354 INFO spawned: 'api2' with pid 1206
+2024-11-24 12:43:43,356 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:44,524 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:43:44,979 INFO spawned: 'api3' with pid 1230
+2024-11-24 12:43:45,306 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:46,313 INFO spawned: 'api2' with pid 1233
+2024-11-24 12:43:46,314 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:47,316 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:49,184 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:49,232 INFO spawned: 'api2' with pid 1267
+2024-11-24 12:43:49,991 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:43:50,994 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:50,997 INFO spawned: 'api3' with pid 1270
+2024-11-24 12:43:52,230 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:52,231 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:53,237 INFO spawned: 'api2' with pid 1303
+2024-11-24 12:43:54,239 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:55,932 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:43:56,102 INFO spawned: 'api3' with pid 1322
+2024-11-24 12:43:56,103 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:43:57,109 INFO spawned: 'api2' with pid 1325
+2024-11-24 12:43:57,110 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:58,111 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:43:59,999 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:00,243 INFO spawned: 'api2' with pid 1359
+2024-11-24 12:44:00,936 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:44:01,939 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:01,943 INFO spawned: 'api3' with pid 1362
+2024-11-24 12:44:03,095 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:03,096 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:04,103 INFO spawned: 'api2' with pid 1395
+2024-11-24 12:44:05,105 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:06,926 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:44:07,049 INFO spawned: 'api3' with pid 1417
+2024-11-24 12:44:07,050 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:08,057 INFO spawned: 'api2' with pid 1420
+2024-11-24 12:44:08,057 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:09,058 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:11,091 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:11,474 INFO spawned: 'api2' with pid 1454
+2024-11-24 12:44:12,196 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:44:13,199 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:13,204 INFO spawned: 'api3' with pid 1457
+2024-11-24 12:44:14,320 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:14,321 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:15,328 INFO spawned: 'api2' with pid 1492
+2024-11-24 12:44:16,330 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:18,146 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:44:18,290 INFO spawned: 'api3' with pid 1512
+2024-11-24 12:44:18,291 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:19,298 INFO spawned: 'api2' with pid 1515
+2024-11-24 12:44:19,299 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:20,301 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:22,154 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:22,484 INFO spawned: 'api2' with pid 1549
+2024-11-24 12:44:23,157 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:44:24,160 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:24,165 INFO spawned: 'api3' with pid 1553
+2024-11-24 12:44:25,293 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:25,293 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:26,301 INFO spawned: 'api2' with pid 1586
+2024-11-24 12:44:27,303 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:28,969 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:44:29,189 INFO spawned: 'api3' with pid 1605
+2024-11-24 12:44:29,189 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:30,197 INFO spawned: 'api2' with pid 1608
+2024-11-24 12:44:30,197 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:31,197 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:33,131 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:33,421 INFO spawned: 'api2' with pid 1659
+2024-11-24 12:44:34,338 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:44:35,342 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:35,350 INFO spawned: 'api3' with pid 1687
+2024-11-24 12:44:36,370 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:36,371 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:37,377 INFO spawned: 'api2' with pid 1705
+2024-11-24 12:44:38,379 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:40,380 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:44:40,478 INFO spawned: 'api3' with pid 1724
+2024-11-24 12:44:40,479 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:41,485 INFO spawned: 'api2' with pid 1727
+2024-11-24 12:44:41,486 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:42,488 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:44,443 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:44,732 INFO spawned: 'api2' with pid 1761
+2024-11-24 12:44:45,470 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:44:46,473 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:46,477 INFO spawned: 'api3' with pid 1764
+2024-11-24 12:44:47,738 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:47,738 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:48,744 INFO spawned: 'api2' with pid 1797
+2024-11-24 12:44:49,746 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:51,427 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:44:51,615 INFO spawned: 'api3' with pid 1816
+2024-11-24 12:44:51,616 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:52,622 INFO spawned: 'api2' with pid 1819
+2024-11-24 12:44:52,623 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:53,625 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:55,440 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:55,801 INFO spawned: 'api2' with pid 1853
+2024-11-24 12:44:56,480 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:44:57,483 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:57,487 INFO spawned: 'api3' with pid 1857
+2024-11-24 12:44:58,720 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:44:58,721 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:44:59,727 INFO spawned: 'api2' with pid 1890
+2024-11-24 12:45:00,727 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:02,414 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:45:02,612 INFO spawned: 'api3' with pid 1909
+2024-11-24 12:45:02,613 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:03,620 INFO spawned: 'api2' with pid 1912
+2024-11-24 12:45:03,621 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:04,623 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:06,493 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:06,728 INFO spawned: 'api2' with pid 1946
+2024-11-24 12:45:07,425 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:45:08,428 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:08,432 INFO spawned: 'api3' with pid 1951
+2024-11-24 12:45:09,526 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:09,526 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:10,533 INFO spawned: 'api2' with pid 1984
+2024-11-24 12:45:11,535 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:13,179 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:45:13,364 INFO spawned: 'api3' with pid 2003
+2024-11-24 12:45:13,365 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:14,372 INFO spawned: 'api2' with pid 2006
+2024-11-24 12:45:14,372 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:15,374 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:17,290 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:17,540 INFO spawned: 'api2' with pid 2040
+2024-11-24 12:45:18,226 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:45:19,228 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:19,232 INFO spawned: 'api3' with pid 2043
+2024-11-24 12:45:20,234 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:20,570 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:21,577 INFO spawned: 'api2' with pid 2076
+2024-11-24 12:45:22,579 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:24,309 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:45:24,524 INFO spawned: 'api3' with pid 2097
+2024-11-24 12:45:24,524 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:25,530 INFO spawned: 'api2' with pid 2100
+2024-11-24 12:45:25,531 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:26,533 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:28,394 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:28,669 INFO spawned: 'api2' with pid 2134
+2024-11-24 12:45:29,360 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:45:30,363 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:30,368 INFO spawned: 'api3' with pid 2137
+2024-11-24 12:45:31,499 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:31,499 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:32,506 INFO spawned: 'api2' with pid 2171
+2024-11-24 12:45:33,508 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:35,374 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:45:35,508 INFO spawned: 'api3' with pid 2191
+2024-11-24 12:45:35,509 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:36,515 INFO spawned: 'api2' with pid 2194
+2024-11-24 12:45:36,516 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:37,518 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:39,400 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:39,666 INFO spawned: 'api2' with pid 2229
+2024-11-24 12:45:40,330 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:45:41,333 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:41,338 INFO spawned: 'api3' with pid 2232
+2024-11-24 12:45:42,523 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:42,523 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:43,529 INFO spawned: 'api2' with pid 2265
+2024-11-24 12:45:44,531 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:46,495 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:46,644 INFO spawned: 'api2' with pid 2284
+2024-11-24 12:45:46,645 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:45:47,647 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:47,652 INFO spawned: 'api3' with pid 2287
+2024-11-24 12:45:48,654 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:49,612 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:45:50,619 INFO spawned: 'api2' with pid 2320
+2024-11-24 12:45:51,622 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:45:51,623 WARN received SIGTERM indicating exit request
+2024-11-24 12:45:51,623 INFO waiting for api2, api3 to die
+2024-11-24 12:45:52,788 WARN stopped: api3 (exit status 1)
+2024-11-24 12:47:23,766 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-24 12:47:23,770 INFO supervisord started with pid 1
+2024-11-24 12:47:24,777 INFO spawned: 'api1' with pid 7
+2024-11-24 12:47:24,783 INFO spawned: 'api2' with pid 8
+2024-11-24 12:47:24,788 INFO spawned: 'api3' with pid 9
+2024-11-24 12:47:25,598 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:47:26,605 INFO spawned: 'api1' with pid 30
+2024-11-24 12:47:26,605 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:26,606 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:27,346 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:47:27,848 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:47:28,865 INFO spawned: 'api2' with pid 47
+2024-11-24 12:47:30,048 INFO spawned: 'api1' with pid 51
+2024-11-24 12:47:30,048 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:30,049 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:47:30,679 INFO spawned: 'api3' with pid 68
+2024-11-24 12:47:30,793 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:47:31,795 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:31,795 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:47:32,802 INFO spawned: 'api2' with pid 86
+2024-11-24 12:47:33,807 INFO spawned: 'api1' with pid 89
+2024-11-24 12:47:33,807 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:34,530 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:47:34,916 INFO gave up: api1 entered FATAL state, too many start retries too quickly
+2024-11-24 12:47:35,634 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:47:35,738 INFO spawned: 'api3' with pid 107
+2024-11-24 12:47:35,738 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:47:36,746 INFO spawned: 'api2' with pid 110
+2024-11-24 12:47:36,747 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:37,749 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:39,601 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:47:39,909 INFO spawned: 'api2' with pid 144
+2024-11-24 12:47:40,577 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:47:41,580 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:41,585 INFO spawned: 'api3' with pid 147
+2024-11-24 12:47:42,727 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:42,727 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:47:43,734 INFO spawned: 'api2' with pid 180
+2024-11-24 12:47:44,735 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:46,468 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:47:46,594 INFO spawned: 'api3' with pid 199
+2024-11-24 12:47:46,594 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:47:47,601 INFO spawned: 'api2' with pid 202
+2024-11-24 12:47:47,602 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:48,604 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:50,477 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:47:50,739 INFO spawned: 'api2' with pid 236
+2024-11-24 12:47:51,419 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:47:52,422 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:52,427 INFO spawned: 'api3' with pid 239
+2024-11-24 12:47:53,643 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:53,644 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:47:54,652 INFO spawned: 'api2' with pid 272
+2024-11-24 12:47:55,655 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:57,353 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:47:57,525 INFO spawned: 'api3' with pid 291
+2024-11-24 12:47:57,526 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:47:58,533 INFO spawned: 'api2' with pid 294
+2024-11-24 12:47:58,534 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:47:59,536 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:01,355 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:01,673 INFO spawned: 'api2' with pid 328
+2024-11-24 12:48:02,346 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:48:03,349 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:03,353 INFO spawned: 'api3' with pid 331
+2024-11-24 12:48:04,541 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:04,541 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:05,548 INFO spawned: 'api2' with pid 364
+2024-11-24 12:48:06,549 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:08,356 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:48:08,396 INFO spawned: 'api3' with pid 383
+2024-11-24 12:48:08,397 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:09,404 INFO spawned: 'api2' with pid 386
+2024-11-24 12:48:09,405 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:10,406 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:12,246 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:12,511 INFO spawned: 'api2' with pid 420
+2024-11-24 12:48:13,180 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:48:14,183 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:14,188 INFO spawned: 'api3' with pid 423
+2024-11-24 12:48:15,365 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:15,366 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:16,373 INFO spawned: 'api2' with pid 456
+2024-11-24 12:48:17,375 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:19,035 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:48:19,239 INFO spawned: 'api3' with pid 475
+2024-11-24 12:48:19,240 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:20,247 INFO spawned: 'api2' with pid 478
+2024-11-24 12:48:20,248 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:21,250 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:23,109 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:23,482 INFO spawned: 'api2' with pid 512
+2024-11-24 12:48:24,191 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:48:25,194 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:25,200 INFO spawned: 'api3' with pid 515
+2024-11-24 12:48:26,330 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:26,330 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:27,338 INFO spawned: 'api2' with pid 548
+2024-11-24 12:48:28,340 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:30,116 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:48:30,226 INFO spawned: 'api3' with pid 567
+2024-11-24 12:48:30,227 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:31,233 INFO spawned: 'api2' with pid 570
+2024-11-24 12:48:31,233 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:32,235 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:34,107 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:34,356 INFO spawned: 'api2' with pid 604
+2024-11-24 12:48:35,027 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:48:36,030 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:36,034 INFO spawned: 'api3' with pid 607
+2024-11-24 12:48:37,191 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:37,191 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:38,199 INFO spawned: 'api2' with pid 640
+2024-11-24 12:48:39,201 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:40,924 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:48:41,049 INFO spawned: 'api3' with pid 659
+2024-11-24 12:48:41,050 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:42,058 INFO spawned: 'api2' with pid 662
+2024-11-24 12:48:42,059 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:43,061 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:45,026 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:45,290 INFO spawned: 'api2' with pid 696
+2024-11-24 12:48:45,998 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:48:47,001 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:47,006 INFO spawned: 'api3' with pid 710
+2024-11-24 12:48:48,111 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:48,112 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:49,119 INFO spawned: 'api2' with pid 732
+2024-11-24 12:48:50,121 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:51,896 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:48:52,051 INFO spawned: 'api3' with pid 751
+2024-11-24 12:48:52,052 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:53,060 INFO spawned: 'api2' with pid 754
+2024-11-24 12:48:53,060 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:54,062 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:56,034 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:48:56,417 INFO spawned: 'api2' with pid 788
+2024-11-24 12:48:57,130 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:48:58,133 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:58,138 INFO spawned: 'api3' with pid 791
+2024-11-24 12:48:59,353 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:48:59,354 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:00,360 INFO spawned: 'api2' with pid 824
+2024-11-24 12:49:01,361 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:03,265 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:49:03,363 INFO spawned: 'api3' with pid 843
+2024-11-24 12:49:03,363 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:04,370 INFO spawned: 'api2' with pid 846
+2024-11-24 12:49:04,370 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:05,372 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:05,373 WARN received SIGTERM indicating exit request
+2024-11-24 12:49:05,374 INFO waiting for api2, api3 to die
+2024-11-24 12:49:07,292 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:08,243 WARN stopped: api3 (exit status 1)
+2024-11-24 12:49:17,444 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-24 12:49:17,448 INFO supervisord started with pid 1
+2024-11-24 12:49:18,455 INFO spawned: 'api1' with pid 7
+2024-11-24 12:49:18,460 INFO spawned: 'api2' with pid 8
+2024-11-24 12:49:18,465 INFO spawned: 'api3' with pid 9
+2024-11-24 12:49:19,251 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:49:20,258 INFO spawned: 'api1' with pid 30
+2024-11-24 12:49:20,259 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:20,259 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:21,001 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:49:21,588 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:22,595 INFO spawned: 'api2' with pid 48
+2024-11-24 12:49:23,674 INFO spawned: 'api1' with pid 51
+2024-11-24 12:49:23,675 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:23,676 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:49:24,314 INFO spawned: 'api3' with pid 53
+2024-11-24 12:49:24,385 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:49:25,631 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:25,632 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:26,639 INFO spawned: 'api2' with pid 86
+2024-11-24 12:49:27,646 INFO spawned: 'api1' with pid 89
+2024-11-24 12:49:27,646 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:28,360 WARN exited: api1 (exit status 1; not expected)
+2024-11-24 12:49:28,677 INFO gave up: api1 entered FATAL state, too many start retries too quickly
+2024-11-24 12:49:29,414 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:49:29,430 INFO spawned: 'api3' with pid 107
+2024-11-24 12:49:29,771 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:30,777 INFO spawned: 'api2' with pid 110
+2024-11-24 12:49:30,778 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:31,780 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:33,734 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:33,773 INFO spawned: 'api2' with pid 144
+2024-11-24 12:49:34,509 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:49:35,511 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:35,516 INFO spawned: 'api3' with pid 147
+2024-11-24 12:49:36,731 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:36,732 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:37,738 INFO spawned: 'api2' with pid 180
+2024-11-24 12:49:38,740 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:40,592 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:49:40,732 INFO spawned: 'api3' with pid 199
+2024-11-24 12:49:40,732 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:41,739 INFO spawned: 'api2' with pid 202
+2024-11-24 12:49:41,741 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:42,742 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:44,740 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:45,055 INFO spawned: 'api2' with pid 236
+2024-11-24 12:49:45,737 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:49:46,739 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:46,744 INFO spawned: 'api3' with pid 239
+2024-11-24 12:49:48,000 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:48,001 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:49,009 INFO spawned: 'api2' with pid 272
+2024-11-24 12:49:50,011 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:51,858 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:49:52,071 INFO spawned: 'api3' with pid 291
+2024-11-24 12:49:52,072 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:53,079 INFO spawned: 'api2' with pid 294
+2024-11-24 12:49:53,080 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:54,082 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:56,208 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:49:56,549 INFO spawned: 'api2' with pid 328
+2024-11-24 12:49:57,324 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:49:58,327 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:58,332 INFO spawned: 'api3' with pid 331
+2024-11-24 12:49:59,333 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:49:59,621 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:50:00,627 INFO spawned: 'api2' with pid 364
+2024-11-24 12:50:01,629 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:29,743 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:50:29,927 INFO spawned: 'api3' with pid 383
+2024-11-24 12:50:29,928 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:50:30,934 INFO spawned: 'api2' with pid 386
+2024-11-24 12:50:30,935 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:31,936 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:33,894 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:50:34,254 INFO spawned: 'api2' with pid 420
+2024-11-24 12:50:34,980 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:50:35,983 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:35,988 INFO spawned: 'api3' with pid 423
+2024-11-24 12:50:37,211 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:37,212 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:50:38,218 INFO spawned: 'api2' with pid 456
+2024-11-24 12:50:39,220 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:40,876 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:50:41,111 INFO spawned: 'api3' with pid 475
+2024-11-24 12:50:41,112 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:50:42,118 INFO spawned: 'api2' with pid 478
+2024-11-24 12:50:42,119 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:43,121 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:44,933 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:50:45,191 INFO spawned: 'api2' with pid 512
+2024-11-24 12:50:45,859 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:50:46,861 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:46,866 INFO spawned: 'api3' with pid 515
+2024-11-24 12:50:48,021 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:48,022 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:50:49,030 INFO spawned: 'api2' with pid 548
+2024-11-24 12:50:50,032 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:51,957 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:50:52,109 INFO spawned: 'api2' with pid 567
+2024-11-24 12:50:52,110 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:50:53,112 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:53,117 INFO spawned: 'api3' with pid 570
+2024-11-24 12:50:54,119 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:55,068 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:50:56,076 INFO spawned: 'api2' with pid 603
+2024-11-24 12:50:57,078 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:50:58,190 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:50:58,847 INFO spawned: 'api3' with pid 622
+2024-11-24 12:50:59,262 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:00,269 INFO spawned: 'api2' with pid 625
+2024-11-24 12:51:00,269 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:01,270 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:03,147 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:03,173 INFO spawned: 'api2' with pid 659
+2024-11-24 12:51:03,937 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:51:04,940 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:04,944 INFO spawned: 'api3' with pid 662
+2024-11-24 12:51:06,044 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:06,045 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:07,052 INFO spawned: 'api2' with pid 695
+2024-11-24 12:51:08,053 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:09,912 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:51:09,997 INFO spawned: 'api3' with pid 714
+2024-11-24 12:51:10,000 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:11,006 INFO spawned: 'api2' with pid 717
+2024-11-24 12:51:11,007 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:12,008 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:13,952 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:14,315 INFO spawned: 'api2' with pid 751
+2024-11-24 12:51:15,056 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:51:16,059 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:16,064 INFO spawned: 'api3' with pid 769
+2024-11-24 12:51:17,254 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:17,254 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:18,261 INFO spawned: 'api2' with pid 787
+2024-11-24 12:51:19,263 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:21,157 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:51:21,209 INFO spawned: 'api3' with pid 806
+2024-11-24 12:51:21,210 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:22,215 INFO spawned: 'api2' with pid 809
+2024-11-24 12:51:22,216 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:23,218 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:25,256 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:25,494 INFO spawned: 'api2' with pid 843
+2024-11-24 12:51:26,184 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:51:27,187 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:27,191 INFO spawned: 'api3' with pid 846
+2024-11-24 12:51:28,412 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:28,413 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:29,420 INFO spawned: 'api2' with pid 879
+2024-11-24 12:51:30,422 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:32,166 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:51:32,285 INFO spawned: 'api3' with pid 898
+2024-11-24 12:51:32,285 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:33,292 INFO spawned: 'api2' with pid 901
+2024-11-24 12:51:33,293 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:34,294 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:36,174 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:36,461 INFO spawned: 'api2' with pid 935
+2024-11-24 12:51:37,177 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:51:38,179 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:38,184 INFO spawned: 'api3' with pid 938
+2024-11-24 12:51:39,372 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:39,373 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:40,379 INFO spawned: 'api2' with pid 978
+2024-11-24 12:51:41,381 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:43,139 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:51:43,203 INFO spawned: 'api3' with pid 998
+2024-11-24 12:51:43,204 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:44,210 INFO spawned: 'api2' with pid 1002
+2024-11-24 12:51:44,211 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:45,213 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:47,081 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:47,368 INFO spawned: 'api2' with pid 1036
+2024-11-24 12:51:48,061 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:51:49,063 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:49,068 INFO spawned: 'api3' with pid 1041
+2024-11-24 12:51:50,238 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:50,238 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:51,245 INFO spawned: 'api2' with pid 1075
+2024-11-24 12:51:52,247 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:53,991 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:51:54,118 INFO spawned: 'api3' with pid 1094
+2024-11-24 12:51:54,118 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:55,124 INFO spawned: 'api2' with pid 1097
+2024-11-24 12:51:55,125 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:56,127 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:51:58,054 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:51:58,375 INFO spawned: 'api2' with pid 1131
+2024-11-24 12:51:59,048 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:52:00,051 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:00,055 INFO spawned: 'api3' with pid 1134
+2024-11-24 12:52:01,429 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:01,429 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:02,436 INFO spawned: 'api2' with pid 1167
+2024-11-24 12:52:03,438 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:06,111 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:52:06,251 INFO spawned: 'api3' with pid 1186
+2024-11-24 12:52:06,252 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:07,258 INFO spawned: 'api2' with pid 1188
+2024-11-24 12:52:07,259 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:08,261 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:10,753 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:11,232 INFO spawned: 'api2' with pid 1223
+2024-11-24 12:52:11,979 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:52:12,981 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:12,986 INFO spawned: 'api3' with pid 1226
+2024-11-24 12:52:14,212 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:14,213 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:15,220 INFO spawned: 'api2' with pid 1259
+2024-11-24 12:52:16,222 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:17,877 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:52:18,105 INFO spawned: 'api3' with pid 1278
+2024-11-24 12:52:18,106 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:19,113 INFO spawned: 'api2' with pid 1281
+2024-11-24 12:52:19,113 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:20,115 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:22,129 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:22,540 INFO spawned: 'api2' with pid 1315
+2024-11-24 12:52:23,313 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:52:24,316 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:24,320 INFO spawned: 'api3' with pid 1318
+2024-11-24 12:52:25,545 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:25,546 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:26,553 INFO spawned: 'api2' with pid 1351
+2024-11-24 12:52:27,555 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:29,322 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:52:29,560 INFO spawned: 'api3' with pid 1370
+2024-11-24 12:52:29,561 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:30,567 INFO spawned: 'api2' with pid 1373
+2024-11-24 12:52:30,568 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:31,570 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:33,529 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:33,835 INFO spawned: 'api2' with pid 1407
+2024-11-24 12:52:34,515 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:52:35,518 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:35,523 INFO spawned: 'api3' with pid 1410
+2024-11-24 12:52:36,740 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:36,740 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:37,748 INFO spawned: 'api2' with pid 1443
+2024-11-24 12:52:38,750 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:40,420 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:52:40,653 INFO spawned: 'api3' with pid 1462
+2024-11-24 12:52:40,654 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:41,661 INFO spawned: 'api2' with pid 1465
+2024-11-24 12:52:41,662 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:42,664 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:44,632 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:44,866 INFO spawned: 'api2' with pid 1499
+2024-11-24 12:52:45,585 WARN exited: api3 (exit status 1; not expected)
+2024-11-24 12:52:46,588 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:52:46,592 INFO spawned: 'api3' with pid 1502
+2024-11-24 12:52:47,530 WARN received SIGTERM indicating exit request
+2024-11-24 12:52:47,531 INFO waiting for api2, api3 to die
+2024-11-24 12:52:47,806 WARN exited: api2 (exit status 1; not expected)
+2024-11-24 12:52:50,812 INFO waiting for api3 to die
+2024-11-24 12:52:51,660 WARN stopped: api3 (exit status 1)
+2024-11-24 12:55:09,601 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-24 12:55:09,606 INFO supervisord started with pid 1
+2024-11-24 12:55:10,613 INFO spawned: 'api1' with pid 7
+2024-11-24 12:55:10,619 INFO spawned: 'api2' with pid 8
+2024-11-24 12:55:10,625 INFO spawned: 'api3' with pid 9
+2024-11-24 12:55:11,627 INFO success: api1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:55:11,627 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:55:11,627 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 12:56:06,733 WARN received SIGTERM indicating exit request
+2024-11-24 12:56:06,733 INFO waiting for api1, api2, api3 to die
+2024-11-24 12:56:06,953 WARN stopped: api3 (terminated by SIGTERM)
+2024-11-24 12:56:07,098 WARN stopped: api2 (terminated by SIGTERM)
+2024-11-24 12:56:07,269 WARN stopped: api1 (terminated by SIGTERM)
+2024-11-24 13:49:44,705 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-24 13:49:44,709 INFO supervisord started with pid 1
+2024-11-24 13:49:45,717 INFO spawned: 'api1' with pid 7
+2024-11-24 13:49:45,721 INFO spawned: 'api2' with pid 8
+2024-11-24 13:49:45,726 INFO spawned: 'api3' with pid 9
+2024-11-24 13:49:46,728 INFO success: api1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 13:49:46,729 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 13:49:46,730 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 13:49:51,575 WARN received SIGTERM indicating exit request
+2024-11-24 13:49:51,576 INFO waiting for api1, api2, api3 to die
+2024-11-24 13:49:51,698 WARN stopped: api3 (terminated by SIGTERM)
+2024-11-24 13:49:51,900 WARN stopped: api2 (terminated by SIGTERM)
+2024-11-24 13:49:52,058 WARN stopped: api1 (terminated by SIGTERM)
+2024-11-24 13:53:28,339 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-24 13:53:28,344 INFO supervisord started with pid 1
+2024-11-24 13:53:29,348 INFO spawned: 'api1' with pid 7
+2024-11-24 13:53:29,353 INFO spawned: 'api2' with pid 8
+2024-11-24 13:53:29,357 INFO spawned: 'api3' with pid 9
+2024-11-24 13:53:30,360 INFO success: api1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 13:53:30,360 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 13:53:30,361 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 13:57:42,706 WARN received SIGTERM indicating exit request
+2024-11-24 13:57:42,707 INFO waiting for api1, api2, api3 to die
+2024-11-24 13:57:42,882 WARN stopped: api3 (terminated by SIGTERM)
+2024-11-24 13:57:43,095 WARN stopped: api2 (terminated by SIGTERM)
+2024-11-24 13:57:43,300 WARN stopped: api1 (terminated by SIGTERM)
+2024-11-24 14:00:02,932 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-24 14:00:02,936 INFO supervisord started with pid 1
+2024-11-24 14:00:03,942 INFO spawned: 'api1' with pid 7
+2024-11-24 14:00:03,947 INFO spawned: 'api2' with pid 8
+2024-11-24 14:00:03,951 INFO spawned: 'api3' with pid 9
+2024-11-24 14:00:04,954 INFO success: api1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 14:00:04,954 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 14:00:04,954 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 14:03:50,551 WARN received SIGTERM indicating exit request
+2024-11-24 14:03:50,552 INFO waiting for api1, api2, api3 to die
+2024-11-24 14:03:50,685 WARN stopped: api3 (terminated by SIGTERM)
+2024-11-24 14:03:50,810 WARN stopped: api2 (terminated by SIGTERM)
+2024-11-24 14:03:51,017 WARN stopped: api1 (terminated by SIGTERM)
+2024-11-24 14:06:38,951 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-24 14:06:38,955 INFO supervisord started with pid 1
+2024-11-24 14:06:39,960 INFO spawned: 'api1' with pid 7
+2024-11-24 14:06:39,965 INFO spawned: 'api2' with pid 8
+2024-11-24 14:06:39,969 INFO spawned: 'api3' with pid 9
+2024-11-24 14:06:40,971 INFO success: api1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 14:06:40,971 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 14:06:40,972 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 14:10:09,146 WARN received SIGTERM indicating exit request
+2024-11-24 14:10:09,146 INFO waiting for api1, api2, api3 to die
+2024-11-24 14:10:09,325 WARN stopped: api3 (terminated by SIGTERM)
+2024-11-24 14:10:09,494 WARN stopped: api2 (terminated by SIGTERM)
+2024-11-24 14:10:09,621 WARN stopped: api1 (terminated by SIGTERM)
+2024-11-24 14:14:54,437 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-24 14:14:54,442 INFO supervisord started with pid 1
+2024-11-24 14:14:55,448 INFO spawned: 'api1' with pid 7
+2024-11-24 14:14:55,453 INFO spawned: 'api2' with pid 8
+2024-11-24 14:14:55,458 INFO spawned: 'api3' with pid 9
+2024-11-24 14:14:56,460 INFO success: api1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 14:14:56,461 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 14:14:56,461 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 14:23:38,325 WARN received SIGTERM indicating exit request
+2024-11-24 14:23:38,326 INFO waiting for api1, api2, api3 to die
+2024-11-24 14:23:38,540 WARN stopped: api3 (terminated by SIGTERM)
+2024-11-24 14:23:38,657 WARN stopped: api2 (terminated by SIGTERM)
+2024-11-24 14:23:38,788 WARN stopped: api1 (terminated by SIGTERM)
+2024-11-24 14:26:40,462 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-24 14:26:40,469 INFO supervisord started with pid 1
+2024-11-24 14:26:41,474 INFO spawned: 'api1' with pid 7
+2024-11-24 14:26:41,478 INFO spawned: 'api2' with pid 8
+2024-11-24 14:26:41,482 INFO spawned: 'api3' with pid 9
+2024-11-24 14:26:42,484 INFO success: api1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 14:26:42,484 INFO success: api2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 14:26:42,485 INFO success: api3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 14:47:01,723 WARN received SIGTERM indicating exit request
+2024-11-24 14:47:01,724 INFO waiting for api1, api2, api3 to die
+2024-11-24 14:47:01,856 WARN stopped: api3 (terminated by SIGTERM)
+2024-11-24 14:47:02,059 WARN stopped: api2 (terminated by SIGTERM)
+2024-11-24 14:47:02,260 WARN stopped: api1 (terminated by SIGTERM)
