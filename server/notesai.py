@@ -1,23 +1,41 @@
-from crewai import Agent, Task, Crew, Process, LLM
+from fastapi import FastAPI, BackgroundTasks, HTTPException
+from pydantic import BaseModel
+from crewai import Agent, Task, Crew, LLM
+from fastapi.middleware.cors import CORSMiddleware
 from langchain_google_genai import ChatGoogleGenerativeAI
 from crewai.tools import tool
 from dotenv import load_dotenv
 import os
-from search import bing_search_engine
+from langchain_community.tools.bing_search import BingSearchResults
+from langchain_community.utilities import BingSearchAPIWrapper
 from youtube_search import youtube_video_main
+
+# Load environment variables
 load_dotenv()
 
+# Initialize FastAPI app
+app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # You can specify allowed origins like ["http://localhost:3000"]
+    allow_credentials=True,
+    allow_methods=["*"],  # Specify allowed methods, e.g., ["GET", "POST"]
+    allow_headers=["*"],  # Specify allowed headers, e.g., ["Authorization", "Content-Type"]
+)
 
 @tool("search engine")
 def search_engine(question: str) -> str:
     """search the internet using this tool with just your query"""
-    result = bing_search_engine(question)
-    return result
+    api_wrapper = BingSearchAPIWrapper(bing_subscription_key=os.getenv("BING_API_KEY"), k=3)
+    tool = BingSearchResults(api_wrapper=api_wrapper).invoke(question)
+    return tool
 
-@tool("video search")
-def youtube_search_tool(search_term:str) -> str:
-    "searching the youtube to get the best videos for your query"
-    youtube_video_main(search_term)
+# @tool("video search")
+# def youtube_search_tool(search_term:str) -> str:
+#     "searching the youtube to get the best videos for your query"
+#     youtube_video_main(search_term)
 
 
 my_llm = LLM(
@@ -33,7 +51,7 @@ Lead_Educator = Agent(
 """
     To oversee the project, ensuring all educational materials are accurate, engaging, and aligned with
     educational standards, while leading the team to create comprehensive, multi-format resources for 
-    students across subjects.
+    students across subjects and make sure that it is 1400 and more.
 """,
     
 
@@ -131,23 +149,23 @@ Proofreader = Agent(
   
 )
 
-Youtube_Expert = Agent(
-  role='Youtube Expert content Extractor',
-  goal= 
-  """
-  I need you to locate a YouTube video that includes <iframe> tags for embedding purposes, ideally with a detailed explanation or demonstration of how embedding works. The content should be clear, easy to follow, and suitable for educational or tutorial purposes. Provide me with the link to the video and a brief summary of its content.
-  """,
+# Youtube_Expert = Agent(
+#   role='Youtube Expert content Extractor',
+#   goal= 
+#   """
+#   I need you to locate a YouTube video that includes <iframe> tags for embedding purposes, ideally with a detailed explanation or demonstration of how embedding works. The content should be clear, easy to follow, and suitable for educational or tutorial purposes. Provide me with the link to the video and a brief summary of its content.
+#   """,
 
-  backstory= 
-  """
-  The Youtube Expert is skilled at finding content that includes specific technical details, such as embedding videos. With years of experience in curating and extracting valuable YouTube resources, this agent is focused on identifying tutorials or guides that showcase the technical use of YouTube features, such as embedding videos via <iframe> tags.
-  """,
+#   backstory= 
+#   """
+#   The Youtube Expert is skilled at finding content that includes specific technical details, such as embedding videos. With years of experience in curating and extracting valuable YouTube resources, this agent is focused on identifying tutorials or guides that showcase the technical use of YouTube features, such as embedding videos via <iframe> tags.
+#   """,
 
-  tools=[youtube_search_tool],  # Optional, defaults to an empty list
-  llm=my_llm,  # Optional
-  verbose=True,
-  max_retry_limit=2
-)
+#   tools=[youtube_search_tool],  # Optional, defaults to an empty list
+#   llm=my_llm,  # Optional
+#   verbose=True,
+#   max_retry_limit=2
+# )
 
 task1 = Task(
     expected_output=(
@@ -182,21 +200,69 @@ task3= Task(
     output_file='output.md'
 )
 
-# task4 = Task(
-#     expected_output=(
-#         "need to recommend videos using the search tool and then get in the iframe"
-#     ),
-#     description=(
-#         "Locate a YouTube video tutorial on embedding with <iframe> tags, summarize it, "
-#         "and provide the link to the video for educational purposes."
-#     ),
-#     agent=Youtube_Expert  # Assuming the task is for the Youtube Expert
-# )
+# Create Crew
+my_crew = Crew(
+    agents=[Lead_Educator, Multi_Subject_Educators, Content_Writer, Proofreader],
+    tasks=[task1, task2, task3],
+    verbose=True
+)
 
-my_crew = Crew(agents=[Lead_Educator,Multi_Subject_Educators,Content_Writer,Proofreader], tasks=[task1,task2,task3])
-query = """
-create me a biograph of Elon Musk and how much company did he created and how is he successfull.
-"""
-crew = my_crew.kickoff(inputs={"topic": query})
+# Input query model
+class QueryModel(BaseModel):
+    topic: str
 
-print(crew)
+# Status dictionary to track job progress and result
+status = {"status": "idle", "message": "No active process", "output_file": None}
+
+@app.post("/process")
+async def process_topic(query: QueryModel, background_tasks: BackgroundTasks):
+    """
+    Endpoint to process a topic and write the output to a file.
+    """
+    global status
+    status["status"] = "running"
+    status["message"] = "Processing the topic..."
+    status["output_file"] = None
+
+    def run_crew():
+        global status
+        try:
+            crew = my_crew.kickoff(inputs={"topic": query.topic})
+            with open('output.md', 'w') as f:
+                f.write(str(crew))
+            status["status"] = "completed"
+            status["message"] = "Processing completed successfully."
+            status["output_file"] = 'output.md'
+        except Exception as e:
+            status["status"] = "failed"
+            status["message"] = str(e)
+            status["output_file"] = None
+
+    # Run the crew process in the background
+    background_tasks.add_task(run_crew)
+    return {"status": "started", "message": "The process has started."}
+
+@app.get("/status")
+async def get_status():
+    """
+    Endpoint to get the current status of the process.
+    """
+    return status
+
+@app.get("/output")
+async def get_output():
+    """
+    Endpoint to retrieve the output file content after the process is complete.
+    """
+    if status["status"] != "completed":
+        raise HTTPException(status_code=400, detail="Process not completed yet.")
+    try:
+        with open(status["output_file"], 'r') as f:
+            content = f.read()
+        return {"status": "completed", "output": content}
+    except FileNotFoundError:
+        raise HTTPException(status_code=500, detail="Output file not found.")
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8002)
