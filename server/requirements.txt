@@ -15,7 +15,7 @@ crewai
 langchain-community
 
 # Video and Audio Processing
-moviepy
+moviepy==1.0.3
 yt-dlp
 elevenlabs
 srt
