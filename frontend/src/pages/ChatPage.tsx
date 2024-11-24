@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { GraduationCap, Send, Trash2, BookOpen, MessageSquare } from 'lucide-react';
+import { GraduationCap, Send, Trash2, BookOpen, MessageSquare, Video } from 'lucide-react';
 import { parseMessage } from '../utils/messageParser';
 
 interface Message {
@@ -46,7 +46,7 @@ const ChatPage = () => {
 
     try {
       const response = await fetch(
-        `https://4b9f-103-89-235-73.ngrok-free.app/chat/${userRef.current.email}`,
+        `http://localhost:8001/chat/${userRef.current.email}`,
         {
           method: 'POST',
           headers: {
@@ -76,7 +76,7 @@ const ChatPage = () => {
   const handleClearChat = async () => {
     try {
       await fetch(
-        `https://4b9f-103-89-235-73.ngrok-free.app/clear_history/${userRef.current.email}`,
+        `http://localhost:8001/clear_history/${userRef.current.email}`,
         {
           method: 'POST',
           headers: {
@@ -111,21 +111,28 @@ const ChatPage = () => {
         </div>
 
         <nav className="flex-1">
-          <Link
-            to="/chat"
-            className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-gray-700 mb-2"
-          >
-            <MessageSquare className="h-5 w-5" />
-            <span>Chat</span>
-          </Link>
-          <Link
-            to="/notes"
-            className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-gray-700"
-          >
-            <BookOpen className="h-5 w-5" />
-            <span>Create Notes</span>
-          </Link>
-        </nav>
+        <Link
+          to="/chat"
+          className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-gray-700 mb-2"
+        >
+          <MessageSquare className="h-5 w-5" />
+          <span>Chat</span>
+        </Link>
+        <Link
+          to="/notes"
+          className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-gray-700 mb-2"
+        >
+          <BookOpen className="h-5 w-5" />
+          <span>Create Notes</span>
+        </Link>
+        <Link
+          to="/video"
+          className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-gray-700"
+        >
+          <Video className="h-5 w-5" />
+          <span>Video Translate</span>
+        </Link>
+      </nav>
 
         <button
           onClick={handleClearChat}
