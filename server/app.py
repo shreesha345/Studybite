@@ -12,19 +12,27 @@ from langchain_community.tools.bing_search import BingSearchResults
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
 from trafilatura import fetch_url, extract
-
+from transcript import fetch_transcript
 # Load environment variables
 load_dotenv()
 groq_api_key = os.getenv("GROQ_API_KEY")
 
 # Initialize the LLM
 llm = ChatGroq(
-    model="llama3-groq-70b-8192-tool-use-preview",
+    model="gemma2-9b-it",
     temperature=0.7,
     timeout=None,
     max_retries=2,
     groq_api_key=groq_api_key
 )
+
+# llm = ChatGroq(
+#     model="llama3-groq-70b-8192-tool-use-preview",
+#     temperature=0.7,
+#     timeout=None,
+#     max_retries=2,
+#     groq_api_key=groq_api_key
+# )
 
 @tool
 def search_bing(query: str) -> str:
@@ -34,11 +42,9 @@ def search_bing(query: str) -> str:
     return tool.invoke(query)
 
 @tool
-def extract_content(link: str) -> str:
-    """Extract the give url to provide indept reuslt"""
-    downloaded = fetch_url(link)
-    result = extract(downloaded, output_format="json", include_comments=False)
-    return result
+def get_youtube_transcript(url:str) -> str:
+    """get the transcript from youtube with just one url as input"""
+    return fetch_transcript(url)
 
 @tool
 def interactive(question: str, options: List[str], answer: str) -> str:
@@ -48,7 +54,7 @@ def interactive(question: str, options: List[str], answer: str) -> str:
     Parameters:
     - question: The MCQ question as a string.
     - options: A list of options for the MCQ.
-    - answer: The correct answer (e.g., 'A', 'B', etc.).
+    - answer: The correct answer (e.g., 'A', 'B', etc.) inside <value></value>
     
     Returns:
     - HTML code as a string.
@@ -60,30 +66,30 @@ def interactive(question: str, options: List[str], answer: str) -> str:
                 {''.join(f'<div><input type="radio" name="option" value="{chr(65+i)}"> {chr(65+i)}. {option}</div>' for i, option in enumerate(options))}
             </form>
             <div class="answer" style="display:none;">
-                Correct Answer: {answer}
+                Correct Answer: <value>{answer}</value>
             </div>
     """
     return mcq_html
 
 
-tools = [interactive,search_bing,extract_content]  # Add other tools like search_bing, extract_content as needed
+tools = [interactive,search_bing,get_youtube_transcript]  # Add other tools like search_bing, extract_content as needed
 
 # Define system prompt
 system_prompt = """
-# Expert Professor System
+Expert Professor System Name Studybite
 
 You are an expert professor who explains concepts clearly and creates interactive learning experiences.
-
-## Core Behavior
+Note:
+Core Behavior
 1. Explain concepts clearly with examples
 2. Use code blocks with proper syntax highlighting (```python, ```cpp, etc.)
 3. Create interactive MCQs after every explanation
 
-## MCQ Rules
-Always present MCQs in this HTML format:
+MCQ Rules
+Always present MCQs in this interactive HTML format:
 Question
-```[langauge name]
-[code problems if needed]
+```langauge_name(only used to display code otherwise NO using it)
+code problems if needed
 ```
 <form>
     <div><input type="radio" name="option" value="A">options</div>
@@ -93,10 +99,10 @@ Question
     <div><input type="radio" name="option" value="E">options</div>
 </form>
 <div class="answer" style="display:none;">
-    Correct Answer: option value
+    Correct Answer: <value>answer</value>
 </div>
 
-## Response Flow
+Response Flow
 1. Explain the topic
 2. Give examples
 3. Add MCQs in HTML format
@@ -176,4 +182,4 @@ async def clear_history(user_id: str):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8001)
