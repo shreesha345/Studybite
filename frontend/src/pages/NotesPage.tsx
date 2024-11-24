@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BookOpen, Loader, ArrowLeft, MessageSquare, GraduationCap } from 'lucide-react';
+import { BookOpen, Loader, ArrowLeft, MessageSquare, GraduationCap,Video} from 'lucide-react';
 import Markdown from 'markdown-to-jsx';
 import { Link } from 'react-router-dom';
 
@@ -40,7 +40,7 @@ const globalStyles = `
   }
 `;
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
   return (
     <div className="w-64 bg-gray-800 p-4 flex flex-col min-h-screen">
       <div className="flex items-center space-x-2 mb-8">
@@ -58,10 +58,17 @@ const Sidebar = () => {
         </Link>
         <Link
           to="/notes"
-          className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-gray-700"
+          className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-gray-700 mb-2"
         >
           <BookOpen className="h-5 w-5" />
           <span>Create Notes</span>
+        </Link>
+        <Link
+          to="/video"
+          className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-gray-700"
+        >
+          <Video className="h-5 w-5" />
+          <span>Video Translate</span>
         </Link>
       </nav>
     </div>
@@ -255,13 +262,13 @@ const NotesPage = () => {
 
   const checkStatus = async () => {
     try {
-      const response = await fetch('https://4b9f-103-89-235-73.ngrok-free.app/status', {
+      const response = await fetch('http://localhost:8002/status', {
         headers: { 'accept': 'application/json' }
       });
       const data = await response.json();
       
       if (data.status === 'completed') {
-        const outputResponse = await fetch('https://4b9f-103-89-235-73.ngrok-free.app/output', {
+        const outputResponse = await fetch('http://localhost:8002/output', {
           headers: { 'accept': 'application/json' }
         });
         const outputData = await outputResponse.json();
@@ -286,7 +293,7 @@ const NotesPage = () => {
     setMarkdownContent('');
 
     try {
-      const response = await fetch('https://4b9f-103-89-235-73.ngrok-free.app/process', {
+      const response = await fetch('http://localhost:8002/process', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
