@@ -1,5 +1,5 @@
 
-![Study Bite Logo](./frontend/icon.svg)
+![StudyBite Logo](./frontend/icon.svg)
 
 # **StudyBite: Visual Learning Companion**  
 
@@ -16,7 +16,7 @@ Students find it difficult to grasp certain ideas through learning limited to wr
 
 
 ## **Overview:**  
-**Study Bite** is a cutting-edge educational chatbot crafted to assist students in understanding intricate ideas and clarifying uncertainties through **visual learning**. By offering interactive **graphics**, brief **video segments**, and a **Create Notes** function, **Study Bite** provides a more captivating and intuitive learning journey than conventional text-focused responses.
+**StudyBite** is a cutting-edge educational chatbot crafted to assist students in understanding intricate ideas and clarifying uncertainties through **visual learning**. By offering interactive **graphics**, brief **video segments**, and a **Create Notes** function, **StudyBite** provides a more captivating and intuitive learning journey than conventional text-focused responses.
 
 
 ## **Objective:**  
@@ -76,7 +76,7 @@ Install Docker from https://www.docker.com/
 
 ## **Who Can Benefit:**  
 - **Students:** Enhance learning by visualizing tough concepts and organizing study materials effectively.  
-- **Educators:** Use **Study Bite** as a supplementary tool to support teaching, provide quick visual aids, and assist in note creation.
+- **Educators:** Use **StudyBite** as a supplementary tool to support teaching, provide quick visual aids, and assist in note creation.
 
 ## File Descriptions
 
