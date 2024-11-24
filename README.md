@@ -1,5 +1,5 @@
 
-![Study Bite Logo](./study_bite.jpeg)
+![Study Bite Logo](./frontend/icon.svg)
 
 # **Study Bite: Visual Learning Companion**  
 
