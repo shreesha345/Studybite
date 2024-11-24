@@ -188,9 +188,9 @@ async def process_video(request: VideoProcessRequest):
 @app.get("/download-video/{filename}")
 async def download_video(filename: str):
     """Download a processed video file."""
-    file_path = os.path.join("Clips", filename)
+    file_path = os.path.join("output", filename)
     
-    if not os.path.exists(file_path):
+    if not os.path.exists("output"):
         logger.error(f"File not found: {file_path}")
         raise HTTPException(status_code=404, detail=f"File {filename} not found")
 
