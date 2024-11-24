@@ -7,7 +7,7 @@
 
 ## **"Transform confusion into clarity. Visualize knowledge. Master any concept."**  
 
-
+[![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://youtu.be/wLyq4ND8gM0)
 
 ## **Problem Statement:**  
 
