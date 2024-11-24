@@ -128,7 +128,7 @@ def dub_video(video_file_name: str, elevenlabs_api_key: str, target_language_cod
             raise ValueError("Dubbed video has no audio track")
 
         original_video_clip.audio = dubbed_video_clip.audio
-        output_video_path = os.path.join(output_dir, f"final-{os.path.basename(video_file_name)}")
+        output_video_path = os.path.join(output_dir, f"{os.path.basename(video_file_name)}")
         
         # Write the final video
         original_video_clip.write_videofile(
@@ -205,5 +205,5 @@ def main_dub(api_key, language_code):
         print(message)
         return message
 
-if __name__ == "__main__":
-    main_dub(api_key='sk_6d05a3ea8ab6987a531768782112fe6b1cd15f746c83ebf7', language_code='hi')
+# if __name__ == "__main__":
+#     main_dub(api_key='', language_code='hi')
