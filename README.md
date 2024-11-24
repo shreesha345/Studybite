@@ -7,7 +7,7 @@
 
 ## **"Transform confusion into clarity. Visualize knowledge. Master any concept."**  
 
-[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg](https://i9.ytimg.com/vi/wLyq4ND8gM0/mq2.jpg?sqp=CKjhjboG-oaymwEmCMACELQB8quKqQMa8AEB-AHUBoACyAOKAgwIABABGDYgTihyMA8=&rs=AOn4CLCktUrNayL-13Bn1pxZ13bcLVOhfg" width="50%">]("https://youtu.be/wLyq4ND8gM0")
+[<img src="https://i9.ytimg.com/vi/wLyq4ND8gM0/mq2.jpg?sqp=CKjhjboG-oaymwEmCMACELQB8quKqQMa8AEB-AHUBoACyAOKAgwIABABGDYgTihyMA8=&rs=AOn4CLCktUrNayL-13Bn1pxZ13bcLVOhfg" width="50%">]("https://youtu.be/wLyq4ND8gM0")
 
 ## **Problem Statement:**  
 
