@@ -7,7 +7,7 @@
 
 ## **"Transform confusion into clarity. Visualize knowledge. Master any concept."**  
 
-[<img src="https://i9.ytimg.com/vi/wLyq4ND8gM0/mq2.jpg?sqp=CKjhjboG-oaymwEmCMACELQB8quKqQMa8AEB-AHUBoACyAOKAgwIABABGDYgTihyMA8=&rs=AOn4CLCktUrNayL-13Bn1pxZ13bcLVOhfg" width="50%">]("https://youtu.be/wLyq4ND8gM0")
+[![Watch the video](https://github.com/user-attachments/assets/fe2d1a07-fc4a-436b-a3a5-5c297ec38480)](https://youtu.be/wLyq4ND8gM0)
 
 ## **Problem Statement:**  
 
